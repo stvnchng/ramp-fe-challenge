@@ -203,6 +203,8 @@ _You need to fix some of the previous bugs in order to reproduce_
 
 **Actual:** In steps 6 and 8, toggled transaction lost the value given in step 2. _(E.g. Social Media Ads Inc is checked again)_
 
+**Solution:** The fetch request is made but the cache doesn't reflect the changes accurately. Clear the paginated and employee transactions cache so that `approved` is reflected with each load.
+
 ## Submission
 
 **IMPORTANT:** Before sharing your CodeSandbox, open the `email.txt` file and replace your email on the only line of the file. Don't use any prefix or suffix, just your email.
