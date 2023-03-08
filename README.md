@@ -80,6 +80,8 @@ We don't have a real API for this challenge, so we added some utilities to simul
 
 **Actual:** Options dropdown stays in the same position as you scroll the page, losing the reference to the select input
 
+**Solution:** gave dropdown flex property so it stays next to its parent input
+
 # Bug 2: Approve checkbox not working
 
 **How to reproduce:**
@@ -89,6 +91,8 @@ We don't have a real API for this challenge, so we added some utilities to simul
 **Expected:** Clicking the checkbox toggles its value
 
 **Actual:** Nothing happens
+
+**Solution:** input needs to be wrapped in parent label so click will bubble down and trigger onChange
 
 # Bug 3: Cannot select _All Employees_ after selecting an employee
 
@@ -102,6 +106,8 @@ We don't have a real API for this challenge, so we added some utilities to simul
 **Expected:** All transactions are loaded
 
 **Actual:** The page crashes
+
+**Solution:** add a check if the EMPTY_EMPLOYEE was toggled in App.tsx and load all transactions instead of loading for a specific person.
 
 # Bug 4: Clicking on View More button not showing correct data
 
